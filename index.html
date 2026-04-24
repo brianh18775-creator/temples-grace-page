@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temples Grace Catering</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #f97316;
+    }
+    .menu {
+      margin-top: 30px;
+    }
+    .item {
+      border-bottom: 1px solid #333;
+      padding: 10px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 15px 25px;
+      font-size: 18px;
+      background: #f97316;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ea580c;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔥 Temples Grace Catering 🔥</h1>
+  <p>Delicious food. Made with love</p>
+
+  <div class="menu">
+    <div class="item">🍗 Chicken Plate - $10</div>
+    <div class="item">🍖 Rib Plate - $15</div>
+    <div class="item">🥔 Loaded Fries - $8</div>
+    <div class="item">🥤 Drink - $2</div>
+  </div>
+
+  <button onclick="orderNow()">Order Now</button>
+
+  <script>
+    function orderNow() {
+      const email = "youremail@example.com";
+      const subject = "New Food Order";
+      const body = "Hello, I would like to place an order:%0D%0A%0D%0AItem:%0D%0AName:%0D%0APhone:%0D%0APickup Time:";
+
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    }
+  </script>
+
+</body>
+</html>
+Give feedback

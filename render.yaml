@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: temples-grace-page
+    env: static
+    buildCommand: ""
+    staticPublishPath: .
