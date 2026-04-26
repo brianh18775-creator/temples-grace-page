@@ -120,6 +120,30 @@ h1 {
   border-radius: 8px;
 }
 
+/* ORDER FORM */
+.form {
+  background: #2b1b12;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.form input, .form textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.form button {
+  background: #c27b36;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
 /* FOOTER */
 .footer {
   text-align: center;
@@ -140,7 +164,7 @@ h1 {
   <p class="phone">📞 (502) 528-8080</p>
 
   <div class="buttons">
-    <button class="btn btn-order" onclick="orderNow()">Start Order</button>
+    <button class="btn btn-order" onclick="scrollToForm()">Start Order</button>
     <a href="tel:15025288080"><button class="btn btn-call">Call Now</button></a>
   </div>
 </div>
@@ -152,7 +176,7 @@ h1 {
   <div class="menu-grid">
     <div class="menu-box">
       <h3>Meats</h3>
-      <div class="item"><span>Ribs</span><span>$</span></div>
+      <div class="item"><span>Ribs</span></div>
       <div class="item"><span>Rib Tips</span></div>
       <div class="item"><span>Chicken Legs</span></div>
       <div class="item"><span>Chicken Wings</span></div>
@@ -192,9 +216,23 @@ h1 {
 <div class="section">
   <h2>Gallery</h2>
   <div class="gallery">
-    <img src="food1.jpg" alt="Food">
-    <img src="food2.jpg" alt="Food">
-    <img src="food3.jpg" alt="Food">
+    <img src="food1.jpg">
+    <img src="food2.jpg">
+    <img src="food3.jpg">
+  </div>
+</div>
+
+<!-- 🔥 ORDER FORM -->
+<div class="section" id="order">
+  <h2>Place Your Order</h2>
+
+  <div class="form">
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="text" id="phone" placeholder="Phone Number">
+    <textarea id="items" placeholder="What would you like to order?"></textarea>
+    <input type="text" id="time" placeholder="Pickup Time">
+
+    <button onclick="submitOrder()">Submit Order</button>
   </div>
 </div>
 
@@ -204,12 +242,31 @@ h1 {
 </div>
 
 <script>
-function orderNow() {
-  const email = "templesgrace@gmail.com";
-  const subject = "New Order - Temple's Grace";
-  const body = "Hello, I would like to place an order:%0D%0A%0D%0AItems:%0D%0AName:%0D%0APhone:%0D%0APickup Time:";
+function scrollToForm() {
+  document.getElementById("order").scrollIntoView({ behavior: "smooth" });
+}
 
-  window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+async function submitOrder() {
+  const data = {
+    name: document.getElementById("name").value,
+    phone: document.getElementById("phone").value,
+    items: document.getElementById("items").value,
+    time: document.getElementById("time").value
+  };
+
+  const res = await fetch("/order", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
+
+  if (res.ok) {
+    alert("Order sent!");
+  } else {
+    alert("Error sending order");
+  }
 }
 </script>
 
