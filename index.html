@@ -4,46 +4,60 @@
   <meta charset="UTF-8">
   <title>Temple's Grace Catering</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: 'Georgia', serif;
+      margin: 0;
+      font-family: 'Cinzel', serif;
       background: #2b1b12;
-      color: #2b1b12;
-      text-align: center;
+      display: flex;
+      justify-content: center;
       padding: 20px;
     }
 
-    .container {
-      max-width: 600px;
-      margin: auto;
+    .flyer {
       background: #f5e6c8;
-      padding: 25px;
+      max-width: 900px;
+      width: 100%;
+      padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      box-shadow: 0 0 30px rgba(0,0,0,0.7);
     }
 
     h1 {
-      color: #5a2e0f;
-      margin-bottom: 5px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 42px;
+      text-align: center;
+      margin: 0;
+      color: #4a2a12;
     }
 
-    .subtitle {
+    .location {
+      text-align: center;
       font-size: 14px;
       margin-bottom: 10px;
     }
 
     .phone {
+      text-align: center;
       font-weight: bold;
       margin-bottom: 20px;
     }
 
-    .section {
-      margin-top: 20px;
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
-    .section h2 {
-      border-bottom: 2px solid #5a2e0f;
-      display: inline-block;
+    .col {
+      width: 48%;
+    }
+
+    h2 {
+      border-bottom: 2px solid #4a2a12;
       padding-bottom: 5px;
       margin-bottom: 10px;
     }
@@ -51,12 +65,29 @@
     .item {
       display: flex;
       justify-content: space-between;
-      padding: 6px 0;
-      font-size: 15px;
+      padding: 5px 0;
+      font-size: 14px;
+    }
+
+    .specials {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .special-box {
+      border: 2px solid #4a2a12;
+      padding: 15px;
+      margin-top: 10px;
+    }
+
+    .special-title {
+      font-size: 22px;
+      font-weight: bold;
     }
 
     button {
-      margin-top: 25px;
+      display: block;
+      margin: 25px auto 0;
       padding: 15px 25px;
       font-size: 18px;
       background: #8b4513;
@@ -74,47 +105,55 @@
 
 <body>
 
-  <div class="container">
-    <h1>🔥 Temple's Grace 🔥</h1>
-    <p class="subtitle">📍 312 S 4th St Suite 700, Louisville, KY</p>
+  <div class="flyer">
+
+    <h1>Temple's Grace</h1>
+    <p class="location">📍 312 S 4th St Suite 700, Louisville, KY</p>
     <p class="phone">📞 Call or Text: (502) 528-8080</p>
 
-    <!-- MEATS -->
-    <div class="section">
-      <h2>Meats</h2>
-      <div class="item"><span>Ribs</span><span>$</span></div>
-      <div class="item"><span>Rib Tips</span><span>$</span></div>
-      <div class="item"><span>Chicken Legs</span><span>$</span></div>
-      <div class="item"><span>Chicken Wings</span><span>$</span></div>
-      <div class="item"><span>Ribeye Steak</span><span>$</span></div>
+    <div class="columns">
+
+      <div class="col">
+        <h2>Meats</h2>
+        <div class="item"><span>Ribs</span></div>
+        <div class="item"><span>Rib Tips</span></div>
+        <div class="item"><span>Chicken Legs</span></div>
+        <div class="item"><span>Chicken Wings</span></div>
+        <div class="item"><span>Ribeye Steak</span></div>
+
+        <h2>Drinks</h2>
+        <div class="item"><span>Pepsi</span></div>
+        <div class="item"><span>Sprite</span></div>
+        <div class="item"><span>Temple’s Special Cocktail</span></div>
+      </div>
+
+      <div class="col">
+        <h2>Sides</h2>
+        <div class="item"><span>Smoked Baked Beans</span></div>
+        <div class="item"><span>Greens w/ Turkey</span></div>
+        <div class="item"><span>Mac & Cheese</span></div>
+        <div class="item"><span>Green Beans</span></div>
+
+        <h2>Saturday Specials</h2>
+        <div class="item"><span>Spaghetti + garlic bread</span></div>
+        <div class="item"><span>Fried Fish + fries + slaw</span></div>
+        <div class="item"><span>Fried Wings + fries</span></div>
+      </div>
+
     </div>
 
-    <!-- SIDES -->
-    <div class="section">
-      <h2>Sides</h2>
-      <div class="item"><span>Smoked Baked Beans</span></div>
-      <div class="item"><span>Greens w/ Turkey</span></div>
-      <div class="item"><span>Mac & Cheese</span></div>
-      <div class="item"><span>Green Beans</span></div>
-    </div>
+    <div class="specials">
+      <h2>SPECIAL BUNDLE DEALS</h2>
 
-    <!-- DRINKS -->
-    <div class="section">
-      <h2>Drinks</h2>
-      <div class="item"><span>Pepsi</span></div>
-      <div class="item"><span>Sprite</span></div>
-      <div class="item"><span>Temple's Special Cocktail</span></div>
-    </div>
-
-    <!-- SPECIALS -->
-    <div class="section">
-      <h2>Saturday Specials</h2>
-      <div class="item"><span>Spaghetti w/ garlic bread</span></div>
-      <div class="item"><span>Fried Fish + fries + slaw</span></div>
-      <div class="item"><span>Fried Wings + fries</span></div>
+      <div class="special-box">
+        <div class="special-title">Meal Deals starting at $20!</div>
+        <p>Option 1: $20 → Meat + 1 Side + Drink</p>
+        <p>Option 2: $25 → Meat + 2 Sides + Drink</p>
+      </div>
     </div>
 
     <button onclick="orderNow()">Start Order</button>
+
   </div>
 
   <script>
