@@ -1,170 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Temple's Grace Catering</title>
+<meta charset="UTF-8">
+<title>Temple's Grace Catering</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Cinzel', serif;
-      background: #2b1b12;
-      display: flex;
-      justify-content: center;
-      padding: 20px;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #1a120b;
+  color: #fff;
+}
 
-    .flyer {
-      background: #f5e6c8;
-      max-width: 900px;
-      width: 100%;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.7);
-    }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #1a120b, #2b1b12);
+}
 
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 42px;
-      text-align: center;
-      margin: 0;
-      color: #4a2a12;
-    }
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
 
-    .location {
-      text-align: center;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin: 10px 0;
+  color: #f5d6a3;
+}
 
-    .phone {
-      text-align: center;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
+.subtitle {
+  color: #ccc;
+  font-size: 14px;
+}
 
-    .columns {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+.phone {
+  margin-top: 10px;
+  font-weight: bold;
+}
 
-    .col {
-      width: 48%;
-    }
+/* BUTTONS */
+.buttons {
+  margin-top: 20px;
+}
 
-    h2 {
-      border-bottom: 2px solid #4a2a12;
-      padding-bottom: 5px;
-      margin-bottom: 10px;
-    }
+.btn {
+  padding: 12px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
-    .item {
-      display: flex;
-      justify-content: space-between;
-      padding: 5px 0;
-      font-size: 14px;
-    }
+.btn-order {
+  background: #c27b36;
+  color: white;
+}
 
-    .specials {
-      margin-top: 30px;
-      text-align: center;
-    }
+.btn-call {
+  background: #444;
+  color: white;
+}
 
-    .special-box {
-      border: 2px solid #4a2a12;
-      padding: 15px;
-      margin-top: 10px;
-    }
+/* MENU */
+.section {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+}
 
-    .special-title {
-      font-size: 22px;
-      font-weight: bold;
-    }
+.section h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #f5d6a3;
+}
 
-    button {
-      display: block;
-      margin: 25px auto 0;
-      padding: 15px 25px;
-      font-size: 18px;
-      background: #8b4513;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+.menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-    button:hover {
-      background: #a0522d;
-    }
-  </style>
+.menu-box {
+  flex: 1 1 45%;
+  background: #2b1b12;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+/* DEALS */
+.deals {
+  text-align: center;
+  background: #2b1b12;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 30%;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="flyer">
+<!-- HERO -->
+<div class="hero">
+  <img src="logo.png" class="logo" alt="Logo">
+  <h1>Temple's Grace Catering</h1>
+  <p class="subtitle">📍 312 S 4th St Suite 700, Louisville, KY</p>
+  <p class="phone">📞 (502) 528-8080</p>
 
-    <h1>Temple's Grace</h1>
-    <p class="location">📍 312 S 4th St Suite 700, Louisville, KY</p>
-    <p class="phone">📞 Call or Text: (502) 528-8080</p>
-
-    <div class="columns">
-
-      <div class="col">
-        <h2>Meats</h2>
-        <div class="item"><span>Ribs</span></div>
-        <div class="item"><span>Rib Tips</span></div>
-        <div class="item"><span>Chicken Legs</span></div>
-        <div class="item"><span>Chicken Wings</span></div>
-        <div class="item"><span>Ribeye Steak</span></div>
-
-        <h2>Drinks</h2>
-        <div class="item"><span>Pepsi</span></div>
-        <div class="item"><span>Sprite</span></div>
-        <div class="item"><span>Temple’s Special Cocktail</span></div>
-      </div>
-
-      <div class="col">
-        <h2>Sides</h2>
-        <div class="item"><span>Smoked Baked Beans</span></div>
-        <div class="item"><span>Greens w/ Turkey</span></div>
-        <div class="item"><span>Mac & Cheese</span></div>
-        <div class="item"><span>Green Beans</span></div>
-
-        <h2>Saturday Specials</h2>
-        <div class="item"><span>Spaghetti + garlic bread</span></div>
-        <div class="item"><span>Fried Fish + fries + slaw</span></div>
-        <div class="item"><span>Fried Wings + fries</span></div>
-      </div>
-
-    </div>
-
-    <div class="specials">
-      <h2>SPECIAL BUNDLE DEALS</h2>
-
-      <div class="special-box">
-        <div class="special-title">Meal Deals starting at $20!</div>
-        <p>Option 1: $20 → Meat + 1 Side + Drink</p>
-        <p>Option 2: $25 → Meat + 2 Sides + Drink</p>
-      </div>
-    </div>
-
-    <button onclick="orderNow()">Start Order</button>
-
+  <div class="buttons">
+    <button class="btn btn-order" onclick="orderNow()">Start Order</button>
+    <a href="tel:15025288080"><button class="btn btn-call">Call Now</button></a>
   </div>
+</div>
 
-  <script>
-    function orderNow() {
-      const email = "templesgrace@gmail.com";
-      const subject = "New Order - Temple's Grace";
-      const body = "Hello, I would like to place an order:%0D%0A%0D%0AItems:%0D%0AName:%0D%0APhone:%0D%0APickup Time:";
+<!-- MENU -->
+<div class="section">
+  <h2>Our Menu</h2>
 
-      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-    }
-  </script>
+  <div class="menu-grid">
+    <div class="menu-box">
+      <h3>Meats</h3>
+      <div class="item"><span>Ribs</span><span>$</span></div>
+      <div class="item"><span>Rib Tips</span></div>
+      <div class="item"><span>Chicken Legs</span></div>
+      <div class="item"><span>Chicken Wings</span></div>
+    </div>
+
+    <div class="menu-box">
+      <h3>Sides</h3>
+      <div class="item"><span>Baked Beans</span></div>
+      <div class="item"><span>Greens</span></div>
+      <div class="item"><span>Mac & Cheese</span></div>
+    </div>
+
+    <div class="menu-box">
+      <h3>Drinks</h3>
+      <div class="item"><span>Pepsi</span></div>
+      <div class="item"><span>Sprite</span></div>
+    </div>
+
+    <div class="menu-box">
+      <h3>Specials</h3>
+      <div class="item"><span>Fried Fish Plate</span></div>
+      <div class="item"><span>Spaghetti Plate</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- DEALS -->
+<div class="section">
+  <div class="deals">
+    <h2>🔥 Bundle Deals 🔥</h2>
+    <p>$20 → Meat + 1 Side + Drink</p>
+    <p>$25 → Meat + 2 Sides + Drink</p>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="section">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="food1.jpg" alt="Food">
+    <img src="food2.jpg" alt="Food">
+    <img src="food3.jpg" alt="Food">
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  Temple's Grace Catering © 2026
+</div>
+
+<script>
+function orderNow() {
+  const email = "templesgrace@gmail.com";
+  const subject = "New Order - Temple's Grace";
+  const body = "Hello, I would like to place an order:%0D%0A%0D%0AItems:%0D%0AName:%0D%0APhone:%0D%0APickup Time:";
+
+  window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+}
+</script>
 
 </body>
 </html>
