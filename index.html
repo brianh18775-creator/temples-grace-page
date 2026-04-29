@@ -151,6 +151,29 @@ h1 {
   cursor: pointer;
 }
 
+.arrows {
+  font-size: 40px;
+  text-align: center;
+  margin: 10px 0;
+  animation: glowBounce 1.2s infinite;
+  color: #f5d6a3;
+}
+
+@keyframes glowBounce {
+  0% {
+    transform: translateY(0);
+    text-shadow: 0 0 5px #c27b36;
+  }
+  50% {
+    transform: translateY(10px);
+    text-shadow: 0 0 20px #f5d6a3;
+  }
+  100% {
+    transform: translateY(0);
+    text-shadow: 0 0 5px #c27b36;
+  }
+}
+
 /* FOOTER */
 .footer {
   text-align: center;
@@ -256,6 +279,9 @@ h1 {
 <!-- 🔥 ORDER FORM -->
 <div class="section" id="order">
   <h2>Place Your Order</h2>
+  <div class="arrows">
+  ↓ ↓
+</div>
 
   <div class="form">
     <input type="text" id="name" placeholder="Your Name">
